@@ -1,0 +1,43 @@
+{
+  "sign_up": {
+    "email_label": "E-Mail Cím",
+    "password_label": "Jelszó létrehozása",
+    "email_input_placeholder": "E-Mail címed",
+    "password_input_placeholder": "Jelszavad",
+    "button_label": "Regisztráció",
+    "loading_button_label": "Regisztráció ...",
+    "social_provider_text": "{{provider}} regisztráció",
+    "link_text": "Még nincs fiókod? Regisztrálj!"
+  },
+  "sign_in": {
+    "email_label": "E-Mail Cím",
+    "password_label": "Jelszó",
+    "email_input_placeholder": "E-Mail címed",
+    "password_input_placeholder": "Jelszavad",
+    "button_label": "Bejelentkezés",
+    "loading_button_label": "Bejelentkezés ...",
+    "social_provider_text": " {{provider}} bejelentkezés",
+    "link_text": "Már van fiókod? Bejelentkezés"
+  },
+  "magic_link": {
+    "email_input_label": "E-Mail Cím",
+    "email_input_placeholder": "E-Mail Címed",
+    "button_label": "Egyszeri belépési link küldés",
+    "loading_button_label": "Egyszeri belépési link ...",
+    "link_text": "Egyszeri belépési link küldése E-Mail segítségével"
+  },
+  "forgotten_password": {
+    "email_label": "E-Mail Cím",
+    "password_label": "Jelszavad",
+    "email_input_placeholder": "E-Mail Címed",
+    "button_label": "Anweisungen zum Zurücksetzen des Passworts senden",
+    "loading_button_label": "Anweisungen zum Zurücksetzen senden ...",
+    "link_text": "Elfelejtetted a jelszavadat?"
+  },
+  "update_password": {
+    "password_label": "Új Jelszó",
+    "password_input_placeholder": "Új Jelszavad",
+    "button_label": "Jelszó aktualizálása",
+    "loading_button_label": "Jelszó aktualizálás ..."
+  }
+}
