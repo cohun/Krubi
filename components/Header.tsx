@@ -1,12 +1,14 @@
-'use client';
+"use client";
 
-import { useRouter } from 'next/navigation';
-import { twMerge } from 'tailwind-merge';
-import { RxCaretLeft, RxCaretRight } from 'react-icons/rx';
-import { HiHome } from 'react-icons/hi';
-import { BiSearch } from 'react-icons/bi';
-import Button from './Button';
-import useAuthModal from '@/hooks/useAuthModal';
+import { useRouter } from "next/navigation";
+import { twMerge } from "tailwind-merge";
+import { RxCaretLeft, RxCaretRight } from "react-icons/rx";
+import { HiHome } from "react-icons/hi";
+import { BiSearch } from "react-icons/bi";
+import Button from "./Button";
+import useAuthModal from "@/hooks/useAuthModal";
+import { useSupabaseClient } from "@supabase/auth-helpers-react";
+import { useUser } from "@/hooks/useUser";
 
 interface HeaderProps {
   children: React.ReactNode;
@@ -17,14 +19,21 @@ const Header: React.FC<HeaderProps> = ({ children, className }) => {
   const authModal = useAuthModal();
   const router = useRouter();
 
-  const handleLogout = () => {
-    // Handle logout
+  const supabaseClient = useSupabaseClient();
+  const {} = useUser();
+
+  const handleLogout = async () => {
+    const { error } = await supabaseClient.auth.signOut();
+    router.refresh();
+    if (error) {
+      console.log(error);
+    }
   };
 
   return (
     <div
       className={twMerge(
-        'h-fit bg-gradient-to-b from-emerald-800 p-6',
+        "h-fit bg-gradient-to-b from-emerald-800 p-6",
         className
       )}
     >
