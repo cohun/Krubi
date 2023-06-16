@@ -1,11 +1,12 @@
-"use client";
+'use client';
 
-import { TbPlaylist } from "react-icons/tb";
-import { AiOutlinePlus } from "react-icons/ai";
-import useAuthModal from "@/hooks/useAuthModal";
-import { useUser } from "@/hooks/useUser";
-import useUploadModal from "@/hooks/useUploadModal";
-import { Song } from "@/types";
+import { TbPlaylist } from 'react-icons/tb';
+import { AiOutlinePlus } from 'react-icons/ai';
+import useAuthModal from '@/hooks/useAuthModal';
+import { useUser } from '@/hooks/useUser';
+import useUploadModal from '@/hooks/useUploadModal';
+import { Song } from '@/types';
+import MediaItem from './MediaItem';
 
 interface LibraryProps {
   songs: Song[];
@@ -37,7 +38,7 @@ const Library: React.FC<LibraryProps> = ({ songs }) => {
       </div>
       <div className="flex flex-col px-3 mt-4 gap-y-2">
         {songs.map((song) => (
-          <div key={song.id}>{song.title}</div>
+          <MediaItem key={song.id} data={song} onClick={() => {}} />
         ))}
       </div>
     </div>
