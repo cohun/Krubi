@@ -25,7 +25,9 @@ const Player = () => {
         h-[80px] 
         px-4
       "
-    ></div>
+    >
+      Player!
+    </div>
   );
 };
 
